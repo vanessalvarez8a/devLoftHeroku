@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var mongoose = require('mongoose');
-var port = 8081;
+var port = 9000;
 
 var app = express();
 var mongoUri = 'mongodb://localhost:27017';
@@ -17,6 +17,7 @@ mongoose.connection.once('open', function() {
 
 require('./features/projects/projectRoutes')(app);
 
+app.use(express.static('public'));
 
 app.listen(port, function() {
   console.log('listening on ' + port);

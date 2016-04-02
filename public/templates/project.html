@@ -21,29 +21,38 @@
 
 <section>
   <div class="row gray-area">
-    <form>
+    <form ng-submit="addProject()">
       <div class="sphere">
           <lightbulb-directive></lightbulb-directive>
       </div>
       <div class="box-padding">
           <div class="question">
-              <input type="text" required/>
+              <input type="text" required ng-model="newProjectData.name"/>
               <label>Alumni Name</label>
             </div>
             <div class="question">
-              <input type="text" required/>
+              <input type="text" required ng-model="newProjectData.bootcamp"/>
               <label>Bootcamp</label>
             </div>
             <div class="question">
-              <input type="text" required/>
+              <input type="text" required ng-model="newProjectData.course"/>
               <label>Course</label>
             </div>
             <div class="question">
-              <input type="text" required/>
+              <input type="text" required ng-model="newProjectData.github"/>
               <label>Github Repo</label>
             </div>
-            <button>Submit</button>
+            <div class="question">
+              <input type="text" required ng-model="newProjectData.website"/>
+              <label>Live Website</label>
+            </div>
+            <div class="question">
+              <input type="text" required ng-model="newProjectData.imageurl"/>
+              <label>Image Url</label>
+            </div>
+            <button type="submit">Submit</button>
       </div>
     </form>
+
   </div>
 </section>

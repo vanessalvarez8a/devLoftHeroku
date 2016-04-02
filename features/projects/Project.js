@@ -9,8 +9,10 @@ function capitalize(val) {
 var Project = new mongoose.Schema({
   name: {type: String, set: capitalize, required: true},
   bootcamp: {type: String, set: capitalize, required: true},
-  image: {type: String, required: true, max: 39},
-  github: {type: String, required: true}
+  course: {type: String, set: capitalize, required: true},
+  github: {type: String, required: true},
+  imageurl: {type: String, required: true},
+  website: {type: String, required: true}
 })
 
 module.exports = mongoose.model('Project', Project);

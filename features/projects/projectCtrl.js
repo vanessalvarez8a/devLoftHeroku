@@ -4,6 +4,7 @@ module.exports = {
   addProject: function( req, res ) { //this works
     new Project(req.body).save(function(err, project) {
       if(err) {
+        console.log(err);
         return res.status(500).send(err);
       }
       res.send(project)

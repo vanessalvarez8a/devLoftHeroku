@@ -12,10 +12,12 @@ angular.module('devLoftApp')
   .state('showcase', {
   url: '/showcase',
   templateUrl: '/templates/showcase.html',
+	// controller: 'showcaseCtrl'
 })
   .state('project', {
   url: '/project',
   templateUrl: '/templates/project.html',
+	controller: 'newProjectCtrl'
   })
 
 	$urlRouterProvider.otherwise('/');

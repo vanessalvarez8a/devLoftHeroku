@@ -21,9 +21,6 @@ nav {
   padding-top: 50px;
 }
 
-
-
-
 .logo {
   float: left;
 }
@@ -45,7 +42,7 @@ nav {
 /*/////// HEADER ///////*/
 
 header, .header-area {
-background-image: url(images/pinkHeader.jpg);
+background-image: url(../images/pinkHeader.jpg);
 height: 100vh;
 background-size: cover;
 background-position: center;
@@ -111,7 +108,6 @@ h2 {
 .paragraph-area {
   padding: 0;
 }
-
 
 .photo {
   width: 100%;
@@ -334,21 +330,21 @@ form {
   max-width: 700px;
   min-width: 500px;
   padding: 30px 25px;
-  -webkit-animation-name: slideInUp;
+  -webkit-animation-name: zoomIn;
   -webkit-animation-fill-mode: both;
   -webkit-animation-duration: 3s;
   -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-  -moz-animation-name: slideInUp;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-name: zoomIn;
   -moz-animation-fill-mode: both;
   -moz-animation-duration: 3s;
   -moz-animation-iteration-count: 1;
-  -moz-animation-timing-function: ease;
-  animation-name: slideInUp;
+  -moz-animation-timing-function: ease-in-out;
+  animation-name: zoomIn;
   animation-fill-mode: both;
   animation-duration: 3s;
   animation-iteration-count: 1;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
   padding-top: 60px;
 }
 
@@ -389,7 +385,6 @@ form button {
 }
 
 
-
 form button:hover, form button:focus {
   color: white;
   background-color: #F3504F;
@@ -400,7 +395,6 @@ form .question {   /* padding in between questions */
   position: relative;
   padding: 12px 0;
 }
-
 
 form .question:first-of-type {
   padding-top: 0;
@@ -515,9 +509,6 @@ form .question input[type="text"]:valid ~ label {
 /*body {
   background-color: blue;
 }*/
-
-
-
 
 
 

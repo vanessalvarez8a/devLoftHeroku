@@ -8,12 +8,13 @@ angular.module('devLoftApp').directive('lightbulbDirective', function() {
               fill:none;
               stroke:white;
               stroke-miterlimit:10;
-              stroke-width= 0.5;
+              stroke-width= 0.7;
           }
           svg .light {
             stroke-dasharray: 400;
             stroke-dashoffset: 400;
             animation: 11s bulb 1 forwards;
+            animation-delay: 1s;
 
           }
           @keyframes bulb {
