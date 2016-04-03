@@ -214,6 +214,10 @@ color-logo-directive {
 
 /*/////////// SHOWCASE COLLECTION /////////*/
 
+.github-black {
+  color: black;
+}
+
 .blue-nav {
   padding: 13px;
   background-color: #243646;

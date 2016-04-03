@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var port = 9000;
 
 var app = express();
-var mongoUri = 'mongodb://localhost:27017';
+var mongoUri = 'mongodb://localhost/showcase'; //creating the database name 
 
 app.use(bodyParser.json());
 app.use(cors());

@@ -12,7 +12,7 @@ angular.module('devLoftApp')
   .state('showcase', {
   url: '/showcase',
   templateUrl: '/templates/showcase.html',
-	// controller: 'showcaseCtrl'
+	controller: 'showcaseCtrl'
 })
   .state('project', {
   url: '/project',

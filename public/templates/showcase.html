@@ -34,18 +34,17 @@
 
     <ul class="projects">
 
-      <li class="alumni-project">
+      <li class="alumni-project" ng-repeat="project in projects">
           <div class="postPhoto">
-            <a href=""><img src="images/girl_coding.jpg" alt=""></a>
+            <a href="{{project.website}}"><img ng-src="{{project.imageurl}}" alt=""></a>
           </div>
           <div class="postInfo">
-            <span class="alumniName">Vanessa Alvarez</span><br>
-            <span class="alumniBootcamp">Wyncode</span><br>
-            <span class="alumniBootcamp">Front End Developer</span><br>
-            <span class="alumniGithub"><i class="fa fa-github"></i></span>
+            <span class="alumniName">{{project.name}}</span><br>
+            <span class="alumniBootcamp">{{project.bootcamp}}</span><br>
+            <span class="alumniBootcamp">{{project.course}}</span><br>
+            <span class="alumniGithub"><a class="github-black" href="{{project.github}}"><i class="fa fa-github"></i></a></span>
           </div>
       </li>
-
 
 
 

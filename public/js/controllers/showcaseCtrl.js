@@ -3,17 +3,11 @@ angular.module('devLoftApp')
 
 
 	$scope.getProject = function( user ) {
-		$http({
-      method: 'GET',
-      url: 'http://localhost:9000/api/project',
-      data:
-    }).then(function(res) {
-      if(res.data) {
-        $scope.project = $scope
-      }else{
-        console.log('failed');
-      }
+    projectService.getProject().then(function(response) {
+      $scope.projects = response.data; // .data is an array and projects will be the project in projects 
+      console.log($scope.projects);
     })
-	}
 
+	}
+  $scope.getProject();
 });

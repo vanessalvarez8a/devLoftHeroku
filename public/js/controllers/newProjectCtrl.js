@@ -3,18 +3,10 @@ angular.module('devLoftApp')
 
   $scope.newProjectData = {};
 
-	$scope.addProject = function( user ) {
-    console.log($scope.newProjectData);
-		$http({
-      method: 'POST',
-      url: 'http://localhost:9000/api/project',
-      data: $scope.newProjectData
-    }).then(function(res) {
-      if(res.data) {
-        $state.go('showcase');
-      }else{
-        console.log('failed');
-      }
+	$scope.addProject = function( user, data ) {
+    projectService.addProject($scope.newProjectData).then(function(res) {
+      console.log(res);
+      $state.go('showcase');
     })
 	}
 

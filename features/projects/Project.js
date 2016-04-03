@@ -13,6 +13,7 @@ var Project = new mongoose.Schema({
   github: {type: String, required: true},
   imageurl: {type: String, required: true},
   website: {type: String, required: true}
-})
+
+}, {collection: 'project'}) //collection is the projects 
 
 module.exports = mongoose.model('Project', Project);
