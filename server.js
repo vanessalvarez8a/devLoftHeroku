@@ -19,10 +19,9 @@ app.use(passport.session());
 
 
 
-
-
 var requireAuth = function(req, res, next) {
   if (!req.isAuthenticated()) {
+    // res.redirect('/#/showcase');
     return res.status(403).end();
   }
   return next();
@@ -51,7 +50,10 @@ passport.use(new GitHubStrategy({
       else {
           var newUser = new User();
           newUser.name = profile.displayName;
-          newUser.email = profile.emails[0].value;
+          newUser.githubId = profile.id;
+          if(profile.emails){
+            newUser.email = profile.emails[0].value;
+          };
           newUser.save(function(err){
               if(err) {
                   throw err;
@@ -74,10 +76,12 @@ app.get('/auth/github',
   passport.authenticate('github'));
 
 app.get('/auth/github/callback',
-  passport.authenticate('github', { failureRedirect: '/login' }),
+  passport.authenticate('github', {
+    failureRedirect: '/#/showcase'
+  }),
   function(req, res) {
     // Successful authentication, redirect home.
-    res.redirect('/');
+    res.redirect('/#/project'); //esto me manda del Successful login hacia projects
   });
 
 app.get('/logout', function(req, res) {
@@ -85,8 +89,8 @@ app.get('/logout', function(req, res) {
   res.send('logged out');
 })
 
-app.get('/me', function(req, res) {
-  console.log(req.user);
+app.get('/me', requireAuth, function(req, res) {
+  // console.log(req.user);
   res.json(req.user);
 });
 
