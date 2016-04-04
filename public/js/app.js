@@ -3,9 +3,18 @@ angular.module('devLoftApp', ['ui.router']);
 
 angular.module('devLoftApp')
 .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
-
-
-
+	$httpProvider.interceptors.push(function($q, $location) {
+  return {
+    responseError: function(res) {
+      switch (res.status) {
+        case 403:
+          $location.path('home');
+					console.log(`Reject Resopnse`);
+          return $q.reject(res);
+      }
+    }
+  };
+});
 	$stateProvider
 	.state('home', {
 		url: '/',
@@ -24,15 +33,16 @@ angular.module('devLoftApp')
 	controller: 'newProjectCtrl',
 	resolve: {
 		auth: function(userService, $state) {
-			if(!userService.sucessUser()) {
-				$state.go('showcase');
-			} else
-			console.log(userService.sucessUser())
-			return userService.sucessUser();
-
+			userService.sucessUser()
+				.then(function(response) {
+					return response
+				})
+				.catch(function(err){
+					$state.go('showcase')
+				})
 		}
 	}
-  })
+})
 
 	$urlRouterProvider.otherwise('/');
 
