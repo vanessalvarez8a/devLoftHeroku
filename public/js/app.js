@@ -8,8 +8,8 @@ angular.module('devLoftApp')
     responseError: function(res) {
       switch (res.status) {
         case 403:
-          $location.path('home');
-					console.log(`Reject Resopnse`);
+          // $location.path('home');
+					// console.log(`Reject Resopnse`);
           return $q.reject(res);
       }
     }
@@ -38,7 +38,7 @@ angular.module('devLoftApp')
 					return response
 				})
 				.catch(function(err){
-					$state.go('showcase')
+					$state.go('home')
 				})
 		}
 	}
