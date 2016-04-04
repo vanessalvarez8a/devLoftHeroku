@@ -6,9 +6,10 @@ var secret = require('./secret');
 var passport = require('passport');
 var session = require('express-session');
 var GitHubStrategy = require('passport-github2').Strategy;
-var port = 9000;
+var port = process.env.PORT || 9000 //heroku process.env.PORT
 var app = express();
-var mongoUri = 'mongodb://localhost/showcase'; //creating the database name
+ var mongoUri = 'mongodb://vanessalvarez8a:password@ds015690.mlab.com:15690/heroku_c7dhx0n6';
+// var mongoUri = 'mongodb://localhost/showcase'; //creating the database name
 var User = require('./features/user/User.js');
 
 app.use(bodyParser.json());
