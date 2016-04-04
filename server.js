@@ -40,7 +40,7 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new GitHubStrategy({
     clientID: secret.clientID, //referring to a file: secret
     clientSecret: secret.clientSecret,
-    callbackURL: "http://localhost:9000/auth/github/callback"
+    callbackURL: "https://devloft.herokuapp.com/auth/github/callback"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOne({ githubId: profile.id }, function (err, user) {
