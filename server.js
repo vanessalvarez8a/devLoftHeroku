@@ -14,7 +14,7 @@ var User = require('./features/user/User.js');
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use(session({secret: 'my-session-secret', resave: false, saveUninitialized: false,}));
+app.use(session({secret: 'my-session-secrets', resave: false, saveUninitialized: false,}));
 app.use(passport.initialize());
 app.use(passport.session());
 
