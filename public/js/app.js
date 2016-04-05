@@ -35,6 +35,7 @@ angular.module('devLoftApp')
 		auth: function(userService, $state) {
 			userService.successUser()
 				.then(function(response) {
+					console.log(response);
 					return response
 				})
 				.catch(function(err){
