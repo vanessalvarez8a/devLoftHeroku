@@ -2,7 +2,7 @@ angular.module('devLoftApp').controller('showHeaderCtrl', function($scope, $root
 
   $scope.showHeader = true;
 
-  $rootScope.$on('$locationChangeSuccess', function(event, toState) {
+  $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
     if (toState.name === 'home') {
       $scope.showHeader = true;
     } else {
