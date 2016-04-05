@@ -38,7 +38,7 @@ angular.module('devLoftApp')
 					return response
 				})
 				.catch(function(err){
-					$state.go('/')
+					$state.go('/#/home')
 				})
 		}
 	}
