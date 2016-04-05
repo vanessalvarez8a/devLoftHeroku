@@ -298,17 +298,20 @@ h5 {
 /*.alumni-project:hover::after {
   opacity: 1;
 }*/
-.postPhoto a {
+.postPhoto {
   width: 317px;
   height: 300px;
   overflow: hidden;
-  display: block;
+  display: inline-block;
+  position: relative;
 }
 
 
 .postPhoto img {
   width: 100%;
   max-height: 100%;
+  display: block;
+  position: absolute;
   /*object-fit: cover;*/
 
 }
