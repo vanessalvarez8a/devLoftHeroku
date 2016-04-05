@@ -301,11 +301,11 @@ h5 {
 
 
 
-.postPhoto a img {
+/*.postPhoto a img {
   width: 100%;
-  min-height: 150px;
+  min-height: 75%;*/
   /*object-fit: fill;*/
-}
+/*}*/
 
 .postInfo {
   padding: 20px;
