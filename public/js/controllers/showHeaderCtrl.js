@@ -2,11 +2,9 @@ angular.module('devLoftApp').controller('showHeaderCtrl', function($scope, $root
 
   $scope.showHeader = true;
 
-  // $scope.$on('$stateChangeStart', function(event, toState) {
-
-  $scope.$on('$stateChangeStart', function(event, toState) {
+  $rootScope.$on('$stateChangeStart', function(event, toState) {
     if (toState.name === 'home') {
-       $scope.showHeader = true;
+      $scope.showHeader = true;
     } else {
       $scope.showHeader = false;
     }
@@ -15,3 +13,14 @@ angular.module('devLoftApp').controller('showHeaderCtrl', function($scope, $root
 
 
 });
+
+
+// $scope.$on('$stateChangeStart', function(event, toState) {
+//
+// $scope.$on('$stateChangeStart', function(event, toState) {
+//   if (toState.name === 'home') {
+//      $scope.showHeader = true;
+//   } else {
+//     $scope.showHeader = false;
+//   }
+// });
