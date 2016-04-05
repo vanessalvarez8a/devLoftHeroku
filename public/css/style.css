@@ -300,11 +300,15 @@ h5 {
 }*/
 
 .postPhoto {
+  position: fixed;
   height: 100%;
-}
-.postPhoto a img {
   width: 100%;
-  min-height: 75%;
+}
+
+.postPhoto a img {
+  position: absolute;
+  width: 50%;
+  min-height: 50%;
 }
 
 .postInfo {
