@@ -11,7 +11,11 @@ module.exports = {
     })
   },
   getOneUser: function(req, res) {
-    User.findById(req.params.id).populate('projects').exec().then(function( user ) { //the instance of the model of Project
+    User.findById(req.params.id).populate('projects').exec(function(err, user ) { //the instance of the model of Project
+      if(err) {
+        return res.status(500).send(err);
+      }
+      console.log(user);
       res.send(user);
     })
   },
