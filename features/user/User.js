@@ -10,7 +10,7 @@ var User = new mongoose.Schema({
   name: {type: String, set: capitalize, required: true},
   email: {type: String},
   githubId: {type: String},
-  projects: [{type: mongoose.Schema.Types.ObjectId, ref: 'Project'}]
+  projects: [{type: Mongoose.Schema.ObjectId, ref: 'Project'}]
 
 }, {collection: 'user'}) //collection is the projects
 
