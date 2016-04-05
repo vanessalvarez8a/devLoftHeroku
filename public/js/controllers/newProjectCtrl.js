@@ -1,6 +1,6 @@
 angular.module('devLoftApp')
-.controller('newProjectCtrl', function( $scope, projectService, $http, $state, auth ) {
-  console.log(auth);
+.controller('newProjectCtrl', function( $scope, projectService, $http, $state, currentuser ) {
+
   $scope.newProjectData = {};
 
 	$scope.addProject = function( user, data ) {
@@ -8,6 +8,9 @@ angular.module('devLoftApp')
       console.log(res);
       $state.go('showcase');
     })
-	}
+	};
+
+  $scope.user = currentuser;
+  console.log($scope.user);
 
 });

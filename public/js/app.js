@@ -41,7 +41,11 @@ angular.module('devLoftApp')
 				.catch(function(err){
 					$state.go('home');
 				})
+		},
+		currentuser: function(userService){
+			return userService.getUser();
 		}
+
 	}
 })
 
