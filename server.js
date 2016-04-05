@@ -87,7 +87,8 @@ app.get('/auth/github/callback',
 
 app.get('/logout', function(req, res) {
   req.logout();
-  res.send('logged out');
+  // res.send('logged out');
+  res.redirect('/#/home')
 })
 
 app.get('/me', requireAuth, function(req, res) {
