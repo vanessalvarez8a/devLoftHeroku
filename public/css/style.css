@@ -285,7 +285,6 @@ h5 {
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   height: 100%;
-  position: relative;
   /*Height changed*/
 }
 
@@ -299,17 +298,22 @@ h5 {
 /*.alumni-project:hover::after {
   opacity: 1;
 }*/
-.postPhoto {
+/*.postPhoto {
+  width: 317px;
+  height: 300px;
+
+  display: inline-block;
+
+}*/
+
+a.imagecontainer {
   width: 317px;
   height: 300px;
   overflow: hidden;
   display: inline-block;
-  position: absolute;
-
 }
 
-
-.postPhoto img {
+a.imagecontainer img {
   width: 100%;
   max-height: 100%;
   display: block;
