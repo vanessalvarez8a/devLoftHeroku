@@ -1,4 +1,4 @@
-angular.module('devLoftApp', ['ui.router']);
+angular.module('devLoftApp', ['ui.router', 'ngCookies']);
 
 
 angular.module('devLoftApp')
@@ -19,8 +19,7 @@ angular.module('devLoftApp')
 	.state('home', {
 		url: '/',
 		templateUrl: 'templates/home.html',
-    controller: 'showHeaderCtrl',
-
+    controller: 'showHeaderCtrl'
 	})
   .state('showcase', {
   url: '/showcase',
@@ -32,14 +31,15 @@ angular.module('devLoftApp')
   templateUrl: '/templates/project.html',
 	controller: 'newProjectCtrl',
 	resolve: {
-		auth: function(userService, $state) {
+		auth: function(userService, $state, $cookies) {
 			userService.successUser()
 				.then(function(response) {
 					console.log(response);
-					return response
+					$cookies.put('userId', response._id);
+					return response;
 				})
 				.catch(function(err){
-					$state.go('home')
+					$state.go('home');
 				})
 		}
 	}
