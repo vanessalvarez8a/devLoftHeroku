@@ -305,7 +305,7 @@ h5 {
 .postPhoto a img {
   max-width: 100%;
   min-height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .postInfo {
