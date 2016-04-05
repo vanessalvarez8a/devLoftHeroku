@@ -6,7 +6,7 @@ angular.module('devLoftApp')
       var deferred = $q.defer();
       $http({
         method: 'POST',
-        url: 'http://localhost:9000/api/project',
+        url: 'https://devloft.herokuapp.com/api/project',
         data: {
           name: project.name,
           bootcamp: project.bootcamp,
