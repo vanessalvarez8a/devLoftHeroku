@@ -18,7 +18,7 @@ angular.module('devLoftApp')
   this.getUser = function() {
     var deferred = $q.defer();
     var userid = $cookies.get('userId');
-    $http({method: 'GET', url:'/user/' + userid})
+    $http({method: 'GET', url:'/api/user/' + userid})
             .success(function(response) {
               console.log('success', response);
               deferred.resolve(response);
