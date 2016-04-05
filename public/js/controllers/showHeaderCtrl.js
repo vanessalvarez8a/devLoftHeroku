@@ -6,7 +6,7 @@ angular.module('devLoftApp').controller('showHeaderCtrl', function($scope, $root
 
   $scope.$on('$stateChangeStart', function(event, toState) {
     if (toState.name === 'home') {
-      return $scope.showHeader = true;
+       $scope.showHeader = true;
     } else {
       $scope.showHeader = false;
     }
