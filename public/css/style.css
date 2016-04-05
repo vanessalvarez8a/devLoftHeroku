@@ -304,7 +304,7 @@ h5 {
   width: 100%;
   max-height: 350px;
   /*object-fit: cover;*/
-  display: block;
+  /*display: block;*/
 }
 
 .postInfo {
