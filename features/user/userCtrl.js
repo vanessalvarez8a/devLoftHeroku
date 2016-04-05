@@ -11,7 +11,7 @@ module.exports = {
     })
   },
   getOneUser: function(req, res) {
-    User.findOne({_id:req.params.id}).populate('projects').exec().then(function( user ) { //the instance of the model of Project
+    User.findById(req.params.id).populate('projects').exec().then(function( user ) { //the instance of the model of Project
       res.send(user);
     })
   },
