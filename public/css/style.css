@@ -302,11 +302,10 @@ h5 {
 /*.postPhoto {
   height: 100%;
 }*/
-.postPhoto > img {
+.postPhoto a img {
   max-width: 100%;
   min-height: 100%;
-  width: auto;
-  height: auto;
+  object-fit: contain;
 }
 
 .postInfo {
