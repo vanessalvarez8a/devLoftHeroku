@@ -31,7 +31,7 @@ angular.module('devLoftApp')
           return deferred.promise;
         };
 
-  }
+
 
 
 });
