@@ -301,7 +301,7 @@ h5 {
 
 .postPhoto a img {
   width: 100%;
-  min-height: 750px;
+  min-height: 75%;
 }
 
 .postInfo {
