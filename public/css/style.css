@@ -297,7 +297,7 @@ h5 {
   opacity: 1;
 }*/
 
-.postPhoto img {
+.postPhoto a img {
   width: 100%;
   height: 75%;
 }
