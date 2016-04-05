@@ -303,7 +303,7 @@ h5 {
 
 .postPhoto a img {
   width: 100%;
-  min-height: 75%;
+  min-height: 150px;
   /*object-fit: fill;*/
 }
 
