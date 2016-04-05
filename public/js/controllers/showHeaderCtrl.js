@@ -2,10 +2,15 @@ angular.module('devLoftApp').controller('showHeaderCtrl', function($scope, $root
 
   $scope.showHeader = true;
 
-  $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+  $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState) {
     if (toState.name === 'home') {
       $scope.showHeader = true;
-    } else {
+    } else if(toParams.name === 'home') {
+      $scope.showHeader = true;
+    } else if (fromState.name === 'home') {
+      $scope.showHeader = true;
+    }
+    else {
       $scope.showHeader = false;
     }
   });
