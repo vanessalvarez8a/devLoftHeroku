@@ -301,6 +301,8 @@ h5 {
 .postPhoto {
   width: 317px;
   height: 300px;
+  overflow: hidden;
+  display: block;
 }
 
 
