@@ -298,7 +298,7 @@ h5 {
 /*.alumni-project:hover::after {
   opacity: 1;
 }*/
-.postPhoto {
+.postPhoto a {
   width: 317px;
   height: 300px;
   overflow: hidden;
