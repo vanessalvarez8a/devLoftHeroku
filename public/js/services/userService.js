@@ -1,6 +1,6 @@
 angular.module('devLoftApp')
 .service('userService', function( $http, $q ) {
-  this.sucessUser = function() {
+  this.successUser = function() {
     var deferred = $q.defer();
 
     $http({method: 'GET', url:'/me'})

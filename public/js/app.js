@@ -33,7 +33,7 @@ angular.module('devLoftApp')
 	controller: 'newProjectCtrl',
 	resolve: {
 		auth: function(userService, $state) {
-			userService.sucessUser()
+			userService.successUser()
 				.then(function(response) {
 					return response
 				})
