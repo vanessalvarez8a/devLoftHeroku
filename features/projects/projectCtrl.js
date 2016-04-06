@@ -29,7 +29,7 @@ module.exports = {
     })
   },
   getOneProject: function(req, res) {
-    Project.findOne({"_id":req.params.id}).populate('user').populate('projects').exec().then(function( project ) {
+    Project.findOne({"_id":req.params.id}).populate('user').exec().then(function( project ) {
       res.send(project);
     })
   },
