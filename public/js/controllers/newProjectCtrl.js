@@ -11,7 +11,7 @@ angular.module('devLoftApp')
 	};
 
   $scope.user = currentuser;
-  console.log($scope.user);
+  console.log('$scope.user', $scope.user);
 
 
 
