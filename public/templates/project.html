@@ -15,11 +15,12 @@
 
 <div class="alumni-pink-header">
   <div class="row">
-    <h5>Add Project</h5>
+    <h5 ng-click="shows = !shows">Add Project</h5>
+    <h5 ng-click="shows = !shows">Manage Project</h5>
   </div>
 </div>
 
-<section>
+<section ng-if="shows">
   <div class="row gray-area">
     <form ng-submit="addProject()">
       <div class="sphere">
@@ -55,4 +56,7 @@
     </form>
 
   </div>
+</section>
+<section ng-if="!shows">
+  <h1>Second view</h1>
 </section>

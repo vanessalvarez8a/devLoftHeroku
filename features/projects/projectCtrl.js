@@ -3,16 +3,16 @@ var User = require('../user/User');
 
 module.exports = {
   addProject: function( req, res ) { //this works
-    new Project(req.body).save(function(err, project) {
+    new Project(req.body).save(function(err, project) { //the whole point of this project callback is to put it into user.projects.push
       if(err) {
         console.log(err);
         return res.status(500).send(err);
       }
-      User.findOne({"_id":project.user}).exec( function(err, user) {
+      User.findOne({"_id":project.user}).exec( function(err, user) { //looking for a user that has that user id
         if(err) {
           return res.status(500).send(err);
         }
-        user.projects.push(project._id);
+        user.projects.push(project._id); // pushing the project.id to user.projects array
         console.log("this is project", project);
         console.log("this is user", user);
         user.save(function(err, saveduser) {
