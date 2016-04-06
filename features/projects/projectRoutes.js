@@ -5,6 +5,7 @@ module.exports = function( app ) {
       .post(ctrl.addProject)
       .get(ctrl.getProject)
   app.route('/api/project/:id')
+      .get(ctrl.getOneProject)
       .put(ctrl.putProject)
       .delete(ctrl.deleteProject)
   app.route('/api/project/:userid')

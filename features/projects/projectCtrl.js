@@ -28,6 +28,11 @@ module.exports = {
       res.send(project);
     })
   },
+  getOneProject: function(req, res) {
+    Project.findOne({"_id":req.params.id}).then(function( project ) {
+      res.send(project);
+    })
+  },
   putProject: function(req, res) {
   Project.findByIdAndUpdate(req.params.id, req.body, function(err, project) {
     if(err) {
