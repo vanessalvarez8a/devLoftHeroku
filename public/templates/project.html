@@ -58,5 +58,10 @@
   </div>
 </section>
 <section ng-if="!shows">
-  <h1>Second view</h1>
+  <ul>
+    <li ng-repeat="project in userProjects">
+      {{project.name}}
+    </li>
+  </ul>
+  <p>Second view</p>
 </section>
