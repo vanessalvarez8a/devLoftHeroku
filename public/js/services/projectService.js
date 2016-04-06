@@ -2,9 +2,10 @@ angular.module('devLoftApp')
 .factory('projectService', function( $http, $q, $cookies ) {
   return {
 
-    addProject: function( project ) {
+    addProject: function( project, user ) {
       var deferred = $q.defer();
       var uid = $cookies.get('userId');
+      console.log(user);
       $http({
         method: 'POST',
         url: 'https://devloft.herokuapp.com/api/project/' + uid,

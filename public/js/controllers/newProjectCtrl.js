@@ -3,8 +3,8 @@ angular.module('devLoftApp')
 
   $scope.newProjectData = {};
 
-	$scope.addProject = function( user, data ) {
-    projectService.addProject($scope.newProjectData).then(function(res) {
+	$scope.addProject = function() {
+    projectService.addProject($scope.newProjectData, $scope.user._id).then(function(res) {
       console.log(res);
       $state.go('showcase');
     })
