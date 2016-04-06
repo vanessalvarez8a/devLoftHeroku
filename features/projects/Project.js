@@ -12,8 +12,10 @@ var Project = new mongoose.Schema({
   course: {type: String, set: capitalize, required: true},
   github: {type: String, required: true},
   imageurl: {type: String, required: true},
-  website: {type: String, required: true}
+  website: {type: String, required: true},
+  user: [{type: mongoose.Schema.Types.ObjectId, ref: 'User'}]
 
-}, {collection: 'project'}) //collection is the projects 
+
+}, {collection: 'project'}) //collection is the projects
 
 module.exports = mongoose.model('Project', Project);
