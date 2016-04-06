@@ -4,24 +4,24 @@ var User = require('../user/User');
 module.exports = {
   addProject: function( req, res ) { //this works
     new Project(req.body).save(function(err, project) {
-      // if(err) {
-      //   console.log(err);
-      //   return res.status(500).send(err);
-      // }
-      // User.findOne({"_id":req.params.userid}).exec( function(err, user) {
-      //   if(err) {
-      //     return res.status(500).send(err);
-      //   }
-      //   // user.projects.push(project._id);
-      //   console.log(user);
-      //   user.save(function(err, saveduser) {
-      //     if(err) {
-      //       return res.status(500).send(err);
-      //     }
-      //     res.send(project);
-      //   })
-      // })
-      res.send(project);
+      if(err) {
+        console.log(err);
+        return res.status(500).send(err);
+      }
+      User.findOne({"_id":project.user}).exec( function(err, user) {
+        if(err) {
+          return res.status(500).send(err);
+        }
+        // user.projects.push(project._id);
+        console.log(user);
+        user.save(function(err, saveduser) {
+          if(err) {
+            return res.status(500).send(err);
+          }
+          res.send(project);
+        })
+      })
+      // res.send(project);
     })
   },
   getProject: function(req, res) {
