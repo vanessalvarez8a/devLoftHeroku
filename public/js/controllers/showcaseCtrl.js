@@ -1,5 +1,5 @@
 angular.module('devLoftApp')
-.controller('showcaseCtrl', function( $scope, projectService, $http ) {
+.controller('showcaseCtrl', function( $scope, projectService, $http, userService ) {
 
 
 	$scope.getProject = function( user ) {
@@ -10,4 +10,8 @@ angular.module('devLoftApp')
 
 	}
   $scope.getProject();
+
+	// $scope.getUser = function(user) {
+	// 	userService.get
+	// }
 });
