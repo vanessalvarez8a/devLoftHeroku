@@ -12,8 +12,8 @@ module.exports = {
         if(err) {
           return res.status(500).send(err);
         }
-        user.projects.push(project.user);
-        console.log(user);
+        // user.projects.push(project.user);
+        console.log("this is project", project);
         user.save(function(err, saveduser) {
           if(err) {
             return res.status(500).send(err);
