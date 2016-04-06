@@ -13,7 +13,8 @@ module.exports = {
           return res.status(500).send(err);
         }
         user.projects.push(project._id);
-        // console.log("this is project", project);
+        console.log("this is project", project);
+        console.log("this is user", user);
         user.save(function(err, saveduser) {
           if(err) {
             return res.status(500).send(err);
