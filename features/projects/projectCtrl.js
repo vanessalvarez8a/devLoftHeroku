@@ -12,7 +12,7 @@ module.exports = {
         if(err) {
           return res.status(500).send(err);
         }
-        // user.projects.push(project._id);
+        user.projects.push(project.user);
         console.log(user);
         user.save(function(err, saveduser) {
           if(err) {
