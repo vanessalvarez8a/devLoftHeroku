@@ -8,18 +8,19 @@ module.exports = {
         console.log(err);
         return res.status(500).send(err);
       }
-      User.findById(req.params.userid).exec( function(err, user) {
-        if(err) {
-          return res.status(500).send(err);
-        }
-        user.projects.push(req.params.userid)
-        user.save(function(err, saveduser) {
-          if(err) {
-            return res.status(500).send(err);
-          }
-          res.send(project);
-        })
-      })
+      // User.findById(req.params.userid).exec( function(err, user) {
+      //   if(err) {
+      //     return res.status(500).send(err);
+      //   }
+      //   user.projects.push(req.params.userid)
+      //   user.save(function(err, saveduser) {
+      //     if(err) {
+      //       return res.status(500).send(err);
+      //     }
+      //     res.send(project);
+      //   })
+      // })
+      res.send(project);
     })
   },
   getProject: function(req, res) {

@@ -4,7 +4,7 @@ angular.module('devLoftApp')
   $scope.newProjectData = {};
 
 	$scope.addProject = function() {
-    projectService.addProject($scope.newProjectData, $scope.user._id).then(function(res) {
+    projectService.addProject($scope.newProjectData, $scope.user._id).then(function(res) { //semantically $scope.newProjectData and the $scope.user.id will be added to the addProject()
       console.log(res);
       $state.go('showcase');
     })
@@ -12,5 +12,7 @@ angular.module('devLoftApp')
 
   $scope.user = currentuser;
   console.log($scope.user);
+
+
 
 });

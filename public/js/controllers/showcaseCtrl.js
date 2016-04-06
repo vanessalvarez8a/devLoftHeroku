@@ -3,8 +3,8 @@ angular.module('devLoftApp')
 
 
 	$scope.getProject = function( user ) {
-    projectService.getProject().then(function(response) {
-      $scope.projects = response.data; // .data is an array and projects will be the project in projects 
+    projectService.getProjects().then(function(response) {
+      $scope.projects = response.data; // .data is an array and projects will be the project in projects
       console.log($scope.projects);
     })
 

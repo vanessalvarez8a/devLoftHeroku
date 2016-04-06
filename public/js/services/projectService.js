@@ -1,28 +1,30 @@
 angular.module('devLoftApp')
-.factory('projectService', function( $http, $q, $cookies ) {
+.factory('projectService', function( $http, $q ) {
   return {
 
-    addProject: function( project, user ) {
+    addProject: function( project, userId ) {
       var deferred = $q.defer();
-      var uid = $cookies.get('userId');
-      console.log(user);
+      // var uid = $cookies.get('userId');
+      // console.log(user);
       $http({
         method: 'POST',
-        url: 'https://devloft.herokuapp.com/api/project/' + uid,
+        url: 'https://devloft.herokuapp.com/api/project/',
         data: {
           name: project.name,
           bootcamp: project.bootcamp,
           course: project.course,
           github: project.github,
           imageurl: project.imageurl,
-          website: project.website
+          website: project.website,
+          user: userId
+
         }
       }).then(function(res) {
         deferred.resolve(res);
       })
       return deferred.promise;
     },
-    getProject: function() {
+    getProjects: function() {
       return $http.get('/api/project');
     }
   }

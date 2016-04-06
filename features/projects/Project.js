@@ -13,7 +13,7 @@ var Project = new mongoose.Schema({
   github: {type: String, required: true},
   imageurl: {type: String, required: true},
   website: {type: String, required: true},
-  user: [{type: mongoose.Schema.Types.ObjectId, ref: 'User'}]
+  user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 
 
 }, {collection: 'project'}) //collection is the projects
