@@ -502,7 +502,7 @@ form .question input[type="text"]:valid ~ label {
 }
 
 .active{
-  border-bottom:solid 2px;
+  border-bottom: solid 2px;
   font-style: italic;
 }
 
