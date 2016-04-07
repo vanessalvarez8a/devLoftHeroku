@@ -501,6 +501,11 @@ form .question input[type="text"]:valid ~ label {
   cursor: pointer;
 }
 
+.tab-active{
+  border-bottom:solid 2px;
+  font-style: italic;
+}
+
 /*/////////// ANIMATED CURSOR /////////*/
 
 .typed-cursor{
