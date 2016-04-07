@@ -515,15 +515,8 @@ form .question input[type="text"]:valid ~ label {
 
 /*/////////// MANAGE PROJECT TAB /////////*/
 
-/*
+
 .delete-button {
-
-}*/
-
-
-
-.delete-button:link,
-.delete-button:visited {
   padding: 10px 10px;
   color: white;
   background-color: #AE3C32;
@@ -531,8 +524,8 @@ form .question input[type="text"]:valid ~ label {
   font-size: 100%;
 }
 
-.delete-button:hover,
-.btn:active {
+
+.delete-button:hover {
   background-color: white;
   border: white;
   color: #AE3C32;
