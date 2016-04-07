@@ -12,8 +12,82 @@
 
 
 
-
 <div class="alumni-pink-header">
+  <div class="row" ng-init="tab = 1">
+    <h5 ng-click="tab = 1">Add Project</h5>
+    <h5 ng-click="tab = 2">Manage Project</h5>
+  </div>
+</div>
+
+<section ng-show="tab === 1">
+  <div class="row gray-area">
+    <form ng-submit="addProject()">
+      <div class="sphere">
+          <lightbulb-directive></lightbulb-directive>
+      </div>
+      <div class="box-padding">
+          <div class="question">
+              <input type="text" required ng-model="newProjectData.name"/>
+              <label>Alumni Name</label>
+            </div>
+            <div class="question">
+              <input type="text" required ng-model="newProjectData.bootcamp"/>
+              <label>Bootcamp</label>
+            </div>
+            <div class="question">
+              <input type="text" required ng-model="newProjectData.course"/>
+              <label>Course</label>
+            </div>
+            <div class="question">
+              <input type="text" required ng-model="newProjectData.github"/>
+              <label>Github Repo</label>
+            </div>
+            <div class="question">
+              <input type="text" required ng-model="newProjectData.website"/>
+              <label>Live Website</label>
+            </div>
+            <div class="question">
+              <input type="text" required ng-model="newProjectData.imageurl"/>
+              <label>Image Url</label>
+            </div>
+            <button type="submit">Submit</button>
+      </div>
+    </form>
+
+  </div>
+</section>
+
+
+
+  <section class="showcase-area" ng-show="tab === 2">
+    <div class="row gray-area">
+
+
+      <ul class="projects">
+        <li class="alumni-project" ng-repeat="project in userProjects">
+            <div class="postPhoto">
+              <a href="{{project.website}}"><img ng-src="{{project.imageurl}}" alt=""></a>
+            </div>
+            <div class="postInfo">
+              <span class="alumniName">{{project.name}}</span><br>
+              <span class="alumniBootcamp">{{project.bootcamp}}</span><br>
+              <span class="alumniBootcamp">{{project.course}}</span><br>
+              <span class="alumniGithub"><a class="github-black" href="{{project.github}}"><i class="fa fa-github"></i></a></span>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+<!-- JOHN!!!!!!!!!!!! -->
+<!-- <div class="alumni-pink-header">
   <div class="row">
     <h5 ng-click="shows = !shows">Add Project</h5>
     <h5 ng-click="shows = !shows">Manage Project</h5>
@@ -78,4 +152,4 @@
         </li>
       </ul>
     </div>
-  </section>
+  </section> -->
