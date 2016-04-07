@@ -1,9 +1,9 @@
 angular.module('devLoftApp')
-.controller('panelCtrl', function() {
+.controller('panelCtrl', function( $scope ) {
 
-  this.tab = 1;
+  $scope.this.tab = 1;
 
-  this.selectTab = function(setTab) {
+  $scope.this.selectTab = function(setTab) {
     this.tab = setTab;
   };
 
