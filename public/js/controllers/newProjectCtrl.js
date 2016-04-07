@@ -18,10 +18,9 @@ angular.module('devLoftApp')
 
 // Changesss
   $scope.deleteProject = function() {
-    userService.deleteProject().then(function(res) {
-      console.log("get user", res);
+    projectService.deleteProject().then(function(res) {
+      
     })
   }
-
 
 });
