@@ -24,16 +24,16 @@ angular.module('devLoftApp')
       })
       return deferred.promise;
     },
-    getProjects: function(query, value) {
-      if(query) {
-        return $http.get('/api/project?' + query + '=' + value);
-      }
+    getProjects: function() {
       return $http.get('/api/project');
     },
     // Changes low
-    deleteProject: function(id) { //parameter from the controllelor
-      console.log('delete id', id);
-      return $http.delete('/api/project/' + id);
+    deleteProject: function(id) { //parameter from the controller
+      return $http.delete('/api/project/' + id); //
     }
   }
 });
+
+// if(query) {
+//   return $http.get('/api/project?' + query + '=' + value);
+// }
