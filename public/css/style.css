@@ -494,23 +494,7 @@ form .question input[type="text"]:valid ~ label {
 
 /*/////////// USER PROJECTS VIEW /////////*/
 
-ul .projects-animation {
-  -webkit-animation-name: zoomIn;
-  -webkit-animation-fill-mode: both;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-  -moz-animation-name: zoomIn;
-  -moz-animation-fill-mode: both;
-  -moz-animation-duration: 3s;
-  -moz-animation-iteration-count: 1;
-  -moz-animation-timing-function: ease-in-out;
-  animation-name: zoomIn;
-  animation-fill-mode: both;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
-}
+
 
 /*/////////// ANIMATED CURSOR /////////*/
 
