@@ -26,6 +26,10 @@ angular.module('devLoftApp')
     },
     getProjects: function() {
       return $http.get('/api/project');
+    },
+    // Changes low 
+    deleteProject: function() {
+      return $http.delete('/api/project/:id');
     }
   }
 });

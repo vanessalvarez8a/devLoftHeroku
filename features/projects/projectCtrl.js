@@ -43,14 +43,36 @@ module.exports = {
     res.send(project);
   })
 },
+
 deleteProject: function(req, res) {
-  Project.findByIdAndRemove(req.params.id, function(err, project) {
+  Project.findByIdAndRemove({"_id":req.params.id}).populate('user').exec().then(function( project ) {
     if(err) {
       return res.status(500).send(err)
     }
-    res.send(project);
+    User.findOne({"_id":project.user}).exec( function(err, user) { //looking for a user that has that user id
+      if(err) {
+        return res.status(500).send(err);
+      }
+      user.projects.splice(project._id); // deleting the project.id to user.projects array
+      console.log("this is project", project);
+      console.log("this is user", user);
+      user.save(function(err, saveduser) {
+        if(err) {
+          return res.status(500).send(err);
+        }
+        res.send(project);
+      })
+    })
   })
 }
+// deleteProject: function(req, res) {
+//   Project.findByIdAndRemove(req.params.id, function(err, project) {
+//     if(err) {
+//       return res.status(500).send(err)
+//     }
+//     res.send(project);
+//   })
+// }
 
 
 }
