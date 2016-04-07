@@ -74,7 +74,7 @@
               <span class="alumniBootcamp">{{project.course}}</span><br>
               <span class="alumniGithub"><a class="github-black" href="{{project.github}}"><i class="fa fa-github"></i></a></span>
               <br>
-              <button class="delete-button" name="deletebutton">Delete</button>
+              <button ng-click="deleteProject(project._id)" class="delete-button" name="deletebutton">Delete</button>
               <button type="submit" class="update-button" name="button">Update</button>
             </div>
         </li>
