@@ -517,13 +517,14 @@ form .question input[type="text"]:valid ~ label {
 
 
 .delete-button {
-  padding: 10px 10px;
+  padding: 10px 15px;
   color: white;
   background-color: #AE3C32;
   border: 1px solid #AE3C32;
   /*float: right;*/
   font-size: 70%;
   cursor: pointer;
+  padding-top: 4px;
 }
 
 
@@ -532,6 +533,24 @@ form .question input[type="text"]:valid ~ label {
   border: white;
   color: #AE3C32;
   border: 1px solid #AE3C32;
+}
+
+
+.update-button {
+  padding: 10px 15px;
+  color: white;
+  background-color: #009788;
+  border: 1px solid #009788;
+  /*float: right;*/
+  font-size: 70%;
+  cursor: pointer;
+  padding-top: 4px;
+}
+.delete-button:hover {
+  background-color: white;
+  border: white;
+  color: #009788;
+  border: 1px solid #009788;
 }
 
 
