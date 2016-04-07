@@ -513,6 +513,32 @@ form .question input[type="text"]:valid ~ label {
   font-weight: 400;
 }
 
+/*/////////// MANAGE PROJECT TAB /////////*/
+
+/*
+.delete-button {
+
+}*/
+
+
+
+.delete-button:link,
+.delete-button:visited {
+  padding: 10px 10px;
+  color: white;
+  background-color: #AE3C32;
+  border: 1px solid #AE3C32;
+  font-size: 100%;
+}
+
+.delete-button:hover,
+.btn:active {
+  background-color: white;
+  border: white;
+  color: #AE3C32;
+}
+
+
 /*/////////// ANIMATED CURSOR /////////*/
 
 .typed-cursor{
