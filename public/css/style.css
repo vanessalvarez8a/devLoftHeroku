@@ -506,6 +506,13 @@ form .question input[type="text"]:valid ~ label {
   font-style: italic;
 }
 
+.tabs-font {
+  font-size: 120%;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
 /*/////////// ANIMATED CURSOR /////////*/
 
 .typed-cursor{
