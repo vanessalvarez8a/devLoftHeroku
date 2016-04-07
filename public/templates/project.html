@@ -57,11 +57,25 @@
 
   </div>
 </section>
-<section ng-if="!shows">
-  <ul>
-    <li ng-repeat="project in userProjects">
-      {{project.name}}
-    </li>
-  </ul>
-  <p>Second view</p>
-</section>
+
+
+
+  <section class="showcase-area" ng-if="!shows">
+    <div class="row gray-area">
+
+
+      <ul class="projects">
+        <li class="alumni-project" ng-repeat="project in userProjects">
+            <div class="postPhoto">
+              <a href="{{project.website}}"><img ng-src="{{project.imageurl}}" alt=""></a>
+            </div>
+            <div class="postInfo">
+              <span class="alumniName">{{project.name}}</span><br>
+              <span class="alumniBootcamp">{{project.bootcamp}}</span><br>
+              <span class="alumniBootcamp">{{project.course}}</span><br>
+              <span class="alumniGithub"><a class="github-black" href="{{project.github}}"><i class="fa fa-github"></i></a></span>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </section>
