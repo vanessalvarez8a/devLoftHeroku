@@ -46,7 +46,7 @@ module.exports = {
 
 deleteProject: function(req, res) {
   console.log('TOP LEVEL')
-  Project.findByIdAndRemove( req.parms.id, function( err, project ) {
+  Project.findByIdAndRemove( req.params.id, function( err, project ) {
     if(err) {
       return res.status(500).send(err)
     }
