@@ -13,13 +13,13 @@
 
 
 <div class="alumni-pink-header">
-  <div class="row" ng-init="tab = 1" ng-controller="panelCtrl as panel">
+  <div class="row" ng-controller="panelCtrl as panel">
     <h5 ng-click="panel.selectTab(1)">Add Project</h5>
     <h5 ng-click="panel.selectTab(2)">Manage Project</h5>
   </div>
 </div>
 
-<section ng-show="tab === 1">
+<section ng-show="tab() === 1">
   <div class="row gray-area">
     <form ng-submit="addProject()">
       <div class="sphere">
@@ -59,7 +59,7 @@
 
 
 
-  <section class="showcase-area" ng-show="tab === 2">
+  <section class="showcase-area" ng-show="tab() === 2">
     <div class="row gray-area">
 
 
