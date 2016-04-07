@@ -525,6 +525,7 @@ form .question input[type="text"]:valid ~ label {
   font-size: 70%;
   cursor: pointer;
   margin-top: 5px;
+  margin-right: 5px;
 }
 
 
@@ -545,6 +546,8 @@ form .question input[type="text"]:valid ~ label {
   font-size: 70%;
   cursor: pointer;
   margin-top: 5px;
+  margin-right: 5px;
+
 }
 .update-button:hover {
   background-color: white;
