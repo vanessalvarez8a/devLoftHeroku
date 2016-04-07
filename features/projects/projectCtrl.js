@@ -59,7 +59,7 @@ deleteProject: function(req, res) {
         if(err) {
           return res.status(500).send(err);
         }
-        return res.send(saveduser);
+        return res.send(project);
       })
     })
   })
