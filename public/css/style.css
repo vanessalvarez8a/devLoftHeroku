@@ -494,7 +494,7 @@ form .question input[type="text"]:valid ~ label {
 
 /*/////////// USER PROJECTS VIEW /////////*/
 
-.projects-animation {
+ul .projects-animation {
   -webkit-animation-name: zoomIn;
   -webkit-animation-fill-mode: both;
   -webkit-animation-duration: 3s;
