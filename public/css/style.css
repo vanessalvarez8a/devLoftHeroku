@@ -542,7 +542,6 @@ form .question input[type="text"]:valid ~ label {
   color: white;
   background-color: #009788;
   border: 1px solid #009788;
-  /*float: right;*/
   font-size: 75%;
   cursor: pointer;
   margin-top: 5px;
