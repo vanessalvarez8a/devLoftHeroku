@@ -501,7 +501,7 @@ form .question input[type="text"]:valid ~ label {
   cursor: pointer;
 }
 
-h5 .tab-active{
+.active{
   border-bottom:solid 2px;
   font-style: italic;
 }
