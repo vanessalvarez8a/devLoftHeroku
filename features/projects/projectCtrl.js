@@ -45,7 +45,7 @@ module.exports = {
 },
 
 deleteProject: function(req, res) {
-  Project.findByIdAndRemove({"_id":req.params.id}).populate('user').exec().then(function( project ) {
+  Project.findOneAndRemove({"_id":req.params.id}).populate('user').exec().then(function( project ) {
     if(err) {
       return res.status(500).send(err)
     }
