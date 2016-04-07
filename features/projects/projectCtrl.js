@@ -53,7 +53,7 @@ deleteProject: function(req, res) {
       if(err) {
         return res.status(500).send(err);
       }
-
+      console.log('HERE!')
       user.projects.splice(user.projects.indexOf(req.params.id), 1); // inndex where to start splicing the 1 is to splice out one thing
       user.save(function(err, saveduser) {
         if(err) {
