@@ -20,7 +20,7 @@ angular.module('devLoftApp')
   $scope.deleteProject = function(id) {
     projectService.deleteProject(id).then(function(res) {
         projectService.getProjects('user', $scope.user._id).then(function(res){
-
+          
           $scope.userProjects = res;
         })
     })
