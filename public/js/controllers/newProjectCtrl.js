@@ -17,10 +17,10 @@ angular.module('devLoftApp')
 
 
 // Changesss
-  $scope.deleteProject = function() {
-    projectService.deleteProject().then(function(res) {
-      
-    })
-  }
+  // $scope.deleteProject = function() {
+  //   projectService.deleteProject().then(function(res) {
+  //
+  //   })
+  // }
 
 });

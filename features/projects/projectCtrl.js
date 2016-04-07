@@ -45,7 +45,7 @@ module.exports = {
 },
 
 deleteProject: function(req, res) {
-  Project.findByIdAndRemove({"_id":req.params.id}).populate('user').exec().then(function( project ) {
+  Project.findOneAndRemove({"_id":req.params.id}).populate('user').exec().then(function( project ) {
     if(err) {
       return res.status(500).send(err)
     }
@@ -54,8 +54,6 @@ deleteProject: function(req, res) {
         return res.status(500).send(err);
       }
       user.projects.splice(project._id); // deleting the project.id to user.projects array
-      console.log("this is project", project);
-      console.log("this is user", user);
       user.save(function(err, saveduser) {
         if(err) {
           return res.status(500).send(err);
