@@ -45,11 +45,11 @@ module.exports = {
 },
 
 deleteProject: function(req, res) {
-  Project.findOneAndRemove({"_id":req.params.id}).exec().then(function( project ) {
+  Project.findByIdAndRemove(req.params.id).exec().then(function( project ) {
     if(err) {
       return res.status(500).send(err)
     }
-    User.findOne({"_id":project.user}).exec( function(err, user) { //looking for a user that has that user id
+    User.findById(project.user).exec( function(err, user) { //looking for a user that has that user id
       if(err) {
         return res.status(500).send(err);
       }
