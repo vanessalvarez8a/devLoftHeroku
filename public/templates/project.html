@@ -64,7 +64,7 @@
   <section class="showcase-area" ng-show="tab === 2">
     <div class="row gray-area">
       <ul class="projects" class="projects-animation">
-        <li class="alumni-project" ng-repeat="project in userProjects" ng-submit="deleteProject()">
+        <li class="alumni-project" ng-repeat="project in userProjects">
             <div class="postPhoto">
               <a href="{{project.website}}"><img ng-src="{{project.imageurl}}" alt=""></a>
             </div>
@@ -74,8 +74,8 @@
               <span class="alumniBootcamp">{{project.course}}</span><br>
               <span class="alumniGithub"><a class="github-black" href="{{project.github}}"><i class="fa fa-github"></i></a></span>
               <br>
-              <button type="submit" class="delete-button" name="deletebutton">Delete</button>
-              <button class="update-button" name="button">Update</button>
+              <button ng-click="deleteProject()" class="delete-button" name="deletebutton">Delete</button>
+              <button type="submit" class="update-button" name="button">Update</button>
             </div>
         </li>
       </ul>
