@@ -522,15 +522,15 @@ form .question input[type="text"]:valid ~ label {
   background-color: #AE3C32;
   border: 1px solid #AE3C32;
   float: right;
-  font-size: 100%;
+  font-size: 90%;
 }
 
 
-/*.delete-button:hover {
+.delete-button:hover {
   background-color: white;
   border: white;
   color: #AE3C32;
-}*/
+}
 
 
 /*/////////// ANIMATED CURSOR /////////*/
