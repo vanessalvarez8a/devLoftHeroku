@@ -3,7 +3,7 @@ angular.module('devLoftApp')
 
   $scope.this.tab = 1;
 
-  $scope.this.selectTab = function(setTab) {
+  this.selectTab = function(setTab) {
     this.tab = setTab;
   };
 
