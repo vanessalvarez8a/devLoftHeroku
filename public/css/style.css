@@ -516,20 +516,20 @@ form .question input[type="text"]:valid ~ label {
 /*/////////// MANAGE PROJECT TAB /////////*/
 
 
-.delete-button {
+button .delete-button {
   padding: 10px 10px;
   color: white;
   background-color: #AE3C32;
   border: 1px solid #AE3C32;
-  font-size: 100%;
+  /*font-size: 100%;*/
 }
 
 
-.delete-button:hover {
+/*.delete-button:hover {
   background-color: white;
   border: white;
   color: #AE3C32;
-}
+}*/
 
 
 /*/////////// ANIMATED CURSOR /////////*/
