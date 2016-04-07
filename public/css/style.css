@@ -494,7 +494,10 @@ form .question input[type="text"]:valid ~ label {
 
 /*/////////// USER PROJECTS VIEW /////////*/
 
-
+.user-tabs {
+  list-style: none;
+  display: inline-block;
+}
 
 /*/////////// ANIMATED CURSOR /////////*/
 
