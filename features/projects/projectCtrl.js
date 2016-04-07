@@ -45,7 +45,7 @@ module.exports = {
 },
 
 deleteProject: function(req, res) {
-  Project.findOneAndRemove({"_id":req.params.id}).populate('user').exec().then(function( project ) {
+  Project.findOneAndRemove({"_id":req.params.id}).exec().then(function( project ) {
     if(err) {
       return res.status(500).send(err)
     }
@@ -53,12 +53,13 @@ deleteProject: function(req, res) {
       if(err) {
         return res.status(500).send(err);
       }
-      user.projects.splice(project._id); // deleting the project.id to user.projects array
+
+      user.projects.splice(user.projects.indexOf(req.params.id), 1); // inndex where to start splicing the 1 is to splice out one thing
       user.save(function(err, saveduser) {
         if(err) {
           return res.status(500).send(err);
         }
-        res.send(project);
+        res.send();
       })
     })
   })
