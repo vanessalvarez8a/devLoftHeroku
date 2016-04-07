@@ -516,7 +516,7 @@ form .question input[type="text"]:valid ~ label {
 /*/////////// MANAGE PROJECT TAB /////////*/
 
 
-button .delete-button {
+.delete-button {
   padding: 10px 10px;
   color: white;
   background-color: #AE3C32;
