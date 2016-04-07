@@ -521,7 +521,8 @@ form .question input[type="text"]:valid ~ label {
   color: white;
   background-color: #AE3C32;
   border: 1px solid #AE3C32;
-  /*font-size: 100%;*/
+  float: right;
+  font-size: 100%;
 }
 
 
