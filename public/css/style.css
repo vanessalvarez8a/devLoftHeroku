@@ -497,7 +497,7 @@ form .question input[type="text"]:valid ~ label {
 .user-tabs {
   list-style: none;
   display: inline-block;
-  margin-left: 60px;
+  margin-right: 60px;
   cursor: pointer;
 }
 
