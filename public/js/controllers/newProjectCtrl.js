@@ -23,6 +23,7 @@ angular.module('devLoftApp')
 
 // CHANGES
   $scope.putProject = function(id, upd) {
+    console.log('putting project', upd);
     projectService.putProject(id, upd).then(function(res) {
         console.log('updated data', res)
     })
