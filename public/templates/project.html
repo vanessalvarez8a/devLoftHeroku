@@ -77,7 +77,7 @@
               <button ng-click="deleteProject(project._id)" class="delete-button" name="deletebutton">Delete Project</button>
 
               <div>
-                <form class="update-form" ng-submit="putProject()">
+                <form class="update-form" ng-submit="putProject(project._id)">
                   <span class="alumniBootcamp">Alumni name: <input type="text" ng-model="newProjectData.name"></span><br>
                   <span class="alumniBootcamp">Bootcamp: <input type="text" ng-model="newProjectData.bootcamp"></span><br>
                   <span class="alumniBootcamp">Course: <input type="text" ng-model="newProjectData.course"></span><br>
