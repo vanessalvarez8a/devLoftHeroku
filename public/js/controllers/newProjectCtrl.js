@@ -30,9 +30,8 @@ angular.module('devLoftApp')
           if(upd[k]){
             console.log('nope, already exists');
           } else {
-            upd[k] = $scope.userProjects[idx];
+            upd[k] = $scope.userProjects[idx][k];
           }
-
         }
         $scope.userProjects[idx] = upd;
         console.log($scope.userProjects[idx]);
