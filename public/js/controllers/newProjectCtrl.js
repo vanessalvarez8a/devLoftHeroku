@@ -17,7 +17,7 @@ angular.module('devLoftApp')
 
   $scope.deleteProject = function(id, idx) {
     projectService.deleteProject(id).then(function(res) {
-      $scope.userProjects.splice(idx, 1);
+      // $scope.userProjects.splice(idx, 1);
     })
   }
 
