@@ -75,7 +75,7 @@
               <span class="alumniGithub"><a class="github-black" href="{{project.github}}"><i class="fa fa-github"></i></a></span>
               <br>
               <button ng-click="deleteProject(project._id)" class="delete-button" name="deletebutton">Delete</button>
-              <button type="submit" class="update-button" name="button">Update</button>
+
               <div>
                 <form class="update-form">
                   <span class="alumniBootcamp">Alumni name: <input type="text" value="{{project.name}}"></span><br>
@@ -85,6 +85,7 @@
                   <span class="alumniBootcamp">Image Url: <input type="text" value="{{project.imageurl}}"></span><br>
                   <span class="alumniBootcamp">Github Repo: <input type="text" value="{{project.github}}"></span>
                 </form>
+                <button type="submit" class="update-button" name="button">Update</button>
               </div>
 
 
