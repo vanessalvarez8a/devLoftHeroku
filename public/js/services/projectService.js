@@ -31,7 +31,7 @@ angular.module('devLoftApp')
     deleteProject: function(id) { //parameter from the controller
       return $http.delete('/api/project/' + id); //
     },
-    putProject: function(id, data) { // CHANGES
+    putProject: function(id, data) { 
       console.log('IM the service');
       var dfd = $q.defer();
       $http.put('/api/project/' + id, data).then(function(res, err){
