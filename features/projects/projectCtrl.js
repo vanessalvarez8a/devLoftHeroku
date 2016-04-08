@@ -45,20 +45,20 @@ module.exports = {
 },
 
 deleteProject: function(req, res) {
-  console.log('TOP LEVEL')
+
   Project.findByIdAndRemove( req.params.id, function( err, project ) {
     if(err) {
       return res.status(500).send(err)
     }
-    console.log('AFTER PROJECT FINDBY ID ')
+
     User.findById(project.user).exec( function(err, user) { //looking for a user that has that user id
       if(err) {
         return res.status(500).send(err);
       }
-      console.log('AFTER USER FIND BY ID!')
+
       user.projects.splice(user.projects.indexOf(req.params.id), 1); // inndex where to start splicing the 1 is to splice out one thing
       user.save(function(err, saveduser) {
-        console.log('AFTER USER SAVE')
+
         if(err) {
           return res.status(500).send(err);
         }
