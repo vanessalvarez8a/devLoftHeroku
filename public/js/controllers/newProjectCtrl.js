@@ -22,15 +22,15 @@ angular.module('devLoftApp')
   }
 
 // CHANGES
-  $scope.putProject = function(id, upd, idx) {
+  $scope.putProject = function(id, upd, idx) { //grabbing the index from the controller
     console.log('putting project', upd);
     projectService.putProject(id, upd).then(function(res) {
         console.log('updated data', res)
         for(var k in $scope.userProjects[idx]){
-          if(upd[k]){
+          if(upd[k]){ //looping through the object
             console.log('nope, already exists');
           } else {
-            upd[k] = $scope.userProjects[idx][k];
+            upd[k] = $scope.userProjects[idx][k]; //$scope.userProjects[index][key]
           }
         }
         $scope.userProjects[idx] = upd;
