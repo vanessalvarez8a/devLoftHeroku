@@ -22,10 +22,11 @@ angular.module('devLoftApp')
   }
 
 // CHANGES
-  $scope.putProject = function(id, upd) {
+  $scope.putProject = function(id, upd, idx) {
     console.log('putting project', upd);
     projectService.putProject(id, upd).then(function(res) {
         console.log('updated data', res)
+        $scope.projects[idx] = res.data;
     })
   }
 

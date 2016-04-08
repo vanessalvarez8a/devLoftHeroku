@@ -64,7 +64,7 @@
   <section class="showcase-area" ng-show="tab === 2">
     <div class="row gray-area">
       <ul class="projects" class="projects-animation">
-        <li class="alumni-project" ng-repeat="project in userProjects">
+        <li class="alumni-project" ng-repeat="project in userProjects track by $index">
             <div class="postPhoto">
               <a href="{{project.website}}"><img ng-src="{{project.imageurl}}" alt=""></a>
             </div>
@@ -85,7 +85,7 @@
                   <span class="alumniBootcamp">Image Url: <input type="text" ng-model="updateData.imageurl"></span><br>
                   <span class="alumniBootcamp">Github Repo: <input type="text" ng-model="updateData.github"></span>
                 </form>
-                <button  ng-click="putProject(project._id, updateData)"class="update-button" name="button">Update Project</button>
+                <button  ng-click="putProject(project._id, updateData, $index)"class="update-button" name="button">Update Project</button>
               </div>
 
 
