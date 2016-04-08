@@ -24,7 +24,7 @@ angular.module('devLoftApp')
 // CHANGES
   $scope.putProject = function(id, upd) {
     projectService.putProject(id, upd).then(function(res) {
-
+        console.log('updated data', res)
     })
   }
 
