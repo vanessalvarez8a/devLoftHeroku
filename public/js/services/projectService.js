@@ -32,12 +32,14 @@ angular.module('devLoftApp')
       return $http.delete('/api/project/' + id); //
     },
     putProject: function(id, data) { // CHANGES
+      console.log('IM the service');
       var dfd = $q.defer();
       $http.put('/api/project/' + id, data).then(function(res, err){
         if (err) {
           dfd.reject(err);
         }
         else{
+          console.log('the res', res);
           dfd.resolve(res);
         }
       })
