@@ -7,7 +7,7 @@ function capitalize(val) {
 
 
 var User = new mongoose.Schema({
-  name: {type: String, set: capitalize, required: true},
+  name: {type: String, set: capitalize},
   email: {type: String},
   githubId: {type: String},
   projects: [{type: mongoose.Schema.Types.ObjectId, ref: 'Project'}]
