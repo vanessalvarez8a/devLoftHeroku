@@ -343,7 +343,7 @@ h5 {
 }
 
 
-form {
+.project-form {
   position: relative;
   margin: 0 auto;
   margin-top: 50px;
@@ -391,7 +391,7 @@ form {
 }
 
 
-form button {
+.project-form button {
   margin-top: 35px;
   background-color: #243646;
   border: 1px solid white;
@@ -409,26 +409,26 @@ form button {
 }
 
 
-form button:hover, form button:focus {
+.project-form button:hover, .project-form button:focus {
   color: white;
   background-color: #F3504F;
   border: #F3504F;
 }
 
-form .question {   /* padding in between questions */
+.project-form .question {   /* padding in between questions */
   position: relative;
   padding: 12px 0;
 }
 
-form .question:first-of-type {
+.project-form .question:first-of-type {
   padding-top: 0;
 }
 
-form .question:last-of-type {
+.project-form .question:last-of-type {
   padding-bottom: 0;
 }
 
-form .question label {
+.project-form .question label {
   transform-origin: left center;
   color: white;
   font-weight: 100;
@@ -443,7 +443,7 @@ form .question label {
   pointer-events: none;
 }
 
-form .question input[type="text"] {
+.project-form .question input[type="text"] {
   appearance: none;
   background-color: #465567;
   border: none;
@@ -467,25 +467,25 @@ form .question input[type="text"] {
   box-shadow: 0 11px 6px -6px #293240;
 }
 
-form .question input[type="text"]:focus {
+.project-form .question input[type="text"]:focus {
   outline: none;
   background: #F3504F;
   color: white;
   margin-top: 30px;
 }
 
-form .question input[type="text"]:valid {
+.project-form .question input[type="text"]:valid {
   margin-top: 30px;
 }
 
-form .question input[type="text"]:focus ~ label {
+.project-form .question input[type="text"]:focus ~ label {
   -moz-transform: translate(0, -35px);
   -ms-transform: translate(0, -35px);
   -webkit-transform: translate(0, -35px);
   transform: translate(0, -35px);
 }
 
-form .question input[type="text"]:valid ~ label {
+.project-form .question input[type="text"]:valid ~ label {
   -moz-transform: translate(5px, -35px) scale(0.8);
   -ms-transform: translate(5px, -35px) scale(0.8);
   -webkit-transform: translate(5px, -35px) scale(0.8);

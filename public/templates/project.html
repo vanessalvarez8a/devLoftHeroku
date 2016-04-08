@@ -23,7 +23,7 @@
 
 <section ng-show="tab === 1">
   <div class="row gray-area">
-    <form ng-submit="addProject()">
+    <form class="project-form" ng-submit="addProject()">
       <div class="sphere">
           <lightbulb-directive></lightbulb-directive>
       </div>
@@ -76,8 +76,8 @@
               <br>
               <button ng-click="deleteProject(project._id)" class="delete-button" name="deletebutton">Delete</button>
               <button type="submit" class="update-button" name="button">Update</button>
-              <div class="postPhoto">
-                <form class="update-form" action="index.html" method="post">
+              <div class="postInfo">
+                <form class="update-form">
                   <input type="text" name="{{project.website}}" value="">
                   <input type="text" name="{{project.imageurl}}" value="">
                   <input type="text" name="{{project.name}}" value="">
@@ -85,7 +85,6 @@
                   <input type="text" name="{{project.bootcamp}}" value="">
                   <input type="text" name="{{project.course}}" value="">
                   <input type="text" name="{{project.github}}" value="">
-
                 </form>
               </div>
 
