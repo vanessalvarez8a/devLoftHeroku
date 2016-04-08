@@ -75,15 +75,15 @@
               <span class="alumniGithub"><a class="github-black" href="{{project.github}}"><i class="fa fa-github"></i></a></span>
               <br>
               <button ng-click="deleteProject(project._id)" class="delete-button" name="deletebutton">Delete Project</button>
-              <br>
+
               <div>
-                <form class="update-form">
-                  <span class="alumniBootcamp">Alumni name: <input type="text" value="{{project.name}}"></span><br>
-                  <span class="alumniBootcamp">Bootcamp: <input type="text" value="{{project.bootcamp}}"></span><br>
-                  <span class="alumniBootcamp">Course: <input type="text" value="{{project.course}}"></span><br>
-                  <span class="alumniBootcamp">Live Website: <input type="text" value="{{project.website}}"></span><br>
-                  <span class="alumniBootcamp">Image Url: <input type="text" value="{{project.imageurl}}"></span><br>
-                  <span class="alumniBootcamp">Github Repo: <input type="text" value="{{project.github}}"></span>
+                <form class="update-form" ng-submit="putProject()">
+                  <span class="alumniBootcamp">Alumni name: <input type="text" value="{{project.name}}" ng-model="newProjectData.name"></span><br>
+                  <span class="alumniBootcamp">Bootcamp: <input type="text" value="{{project.bootcamp}}" ng-model="newProjectData.bootcamp"></span><br>
+                  <span class="alumniBootcamp">Course: <input type="text" value="{{project.course}}" ng-model="newProjectData.course"></span><br>
+                  <span class="alumniBootcamp">Live Website: <input type="text" value="{{project.website}}" ng-model="newProjectData.website"></span><br>
+                  <span class="alumniBootcamp">Image Url: <input type="text" value="{{project.imageurl}}" ng-model="newProjectData.imageurl"></span><br>
+                  <span class="alumniBootcamp">Github Repo: <input type="text" value="{{project.github}}" ng-model="newProjectData.github"></span>
                 </form>
                 <button type="submit" class="update-button" name="button">Update Project</button>
               </div>

@@ -15,13 +15,20 @@ angular.module('devLoftApp')
   console.log($scope.userProjects);
   console.log('$scope.user', $scope.user);
 
-
-// Changesss
   $scope.deleteProject = function(id) {
     projectService.deleteProject(id).then(function(res) {
       // current.user.projects.splice();
     })
   }
+
+// CHANGES 
+  $scope.putProject = function(id) {
+    projectService.putProject(id).then(function(res) {
+
+    })
+  }
+
+
 
 });
 

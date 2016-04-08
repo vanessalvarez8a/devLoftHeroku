@@ -30,6 +30,9 @@ angular.module('devLoftApp')
     // Changes low
     deleteProject: function(id) { //parameter from the controller
       return $http.delete('/api/project/' + id); //
+    },
+    putProject: function(id) { // CHANGES 
+      return $http.put('/api/project/' + id);
     }
   }
 });

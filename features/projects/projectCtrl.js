@@ -35,28 +35,19 @@ module.exports = {
       res.send(project);
     })
   },
-  putProject: function(req, res) {
+
+
+  putProject: function(req, res) { // CHANGES 
   Project.findByIdAndUpdate(req.params.id, req.body, function(err, project) {
     if(err) {
       return res.status(500).send(err)
     }
-    res.send(project);
-  })
-},
-
-deleteProject: function(req, res) {
-
-  Project.findByIdAndRemove( req.params.id, function( err, project ) {
-    if(err) {
-      return res.status(500).send(err)
-    }
-
     User.findById(project.user).exec( function(err, user) { //looking for a user that has that user id
       if(err) {
         return res.status(500).send(err);
       }
 
-      user.projects.splice(user.projects.indexOf(req.params.id), 1); // inndex where to start splicing the 1 is to splice out one thing
+      user.projects.push(project._id); // inndex where to start splicing the 1 is to splice out one thing
       user.save(function(err, saveduser) {
 
         if(err) {
@@ -66,6 +57,30 @@ deleteProject: function(req, res) {
       })
     })
   })
+},
+
+deleteProject: function(req, res) {
+      Project.findByIdAndRemove( req.params.id, function( err, project ) {
+        if(err) {
+          return res.status(500).send(err)
+        }
+
+        User.findById(project.user).exec( function(err, user) { //looking for a user that has that user id
+          if(err) {
+            return res.status(500).send(err);
+          }
+
+          user.projects.splice(user.projects.indexOf(req.params.id), 1); // inndex where to start splicing the 1 is to splice out one thing
+          user.save(function(err, saveduser) {
+
+            if(err) {
+              return res.status(500).send(err);
+            }
+            return res.send(project);
+          })
+        })
+      })
+  }
   // Project.findByIdAndRemove(req.params.id).exec().then(function( project ) {
   //   if(err) {
   //     return res.status(500).send(err)
@@ -86,7 +101,7 @@ deleteProject: function(req, res) {
   //     })
   //   })
   // })
-}
+
 // deleteProject: function(req, res) {
 //   Project.findByIdAndRemove(req.params.id, function(err, project) {
 //     if(err) {
@@ -95,6 +110,4 @@ deleteProject: function(req, res) {
 //     res.send(project);
 //   })
 // }
-
-
 }
