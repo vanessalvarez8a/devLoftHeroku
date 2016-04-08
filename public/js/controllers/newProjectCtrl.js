@@ -23,16 +23,16 @@ angular.module('devLoftApp')
 
 // CHANGES
   $scope.putProject = function(id, upd, idx) {
-    console.log('putting project', upd);
-    projectService.putProject(id, upd).then(function(res) {
-        console.log('updated data', res)
-        for(var k in $scope.userProjects[idx]){
-          if(!upd[k]) upd[k] = $scope.userProjects[k];
-        }
-        $scope.userProjects[idx] = upd;
-        console.log($scope.userProjects[idx]);
-        console.log(upd);
-    })
+    // console.log('putting project', upd);
+    // projectService.putProject(id, upd).then(function(res) {
+    //     console.log('updated data', res)
+    //     for(var k in $scope.userProjects[idx]){
+    //       if(!upd[k]) upd[k] = $scope.userProjects[k];
+    //     }
+    //     $scope.userProjects[idx] = upd;
+    //     console.log($scope.userProjects[idx]);
+    //     console.log(upd);
+    // })
   }
 
 
