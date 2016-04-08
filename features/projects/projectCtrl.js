@@ -37,27 +37,14 @@ module.exports = {
   },
 
 
-  putProject: function(req, res) { // CHANGES 
-  Project.findByIdAndUpdate(req.params.id, req.body, function(err, project) {
-    if(err) {
-      return res.status(500).send(err)
-    }
-    User.findById(project.user).exec( function(err, user) { //looking for a user that has that user id
+  putProject: function(req, res) { // CHANGES
+    Project.findByIdAndUpdate(req.params.id, req.body, function(err, project) {//req.body is the updateData
       if(err) {
-        return res.status(500).send(err);
+        return res.status(500).send(err)
       }
-
-      user.projects.push(project._id); // inndex where to start splicing the 1 is to splice out one thing
-      user.save(function(err, saveduser) {
-
-        if(err) {
-          return res.status(500).send(err);
-        }
-        return res.send(project);
-      })
+      return res.send(project);
     })
-  })
-},
+  },
 
 deleteProject: function(req, res) {
       Project.findByIdAndRemove( req.params.id, function( err, project ) {

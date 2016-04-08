@@ -77,13 +77,13 @@
               <button ng-click="deleteProject(project._id)" class="delete-button" name="deletebutton">Delete Project</button>
 
               <div>
-                <form class="update-form" ng-submit="putProject(project._id)">
-                  <span class="alumniBootcamp">Alumni name: <input type="text" ng-model="newProjectData.name"></span><br>
-                  <span class="alumniBootcamp">Bootcamp: <input type="text" ng-model="newProjectData.bootcamp"></span><br>
-                  <span class="alumniBootcamp">Course: <input type="text" ng-model="newProjectData.course"></span><br>
-                  <span class="alumniBootcamp">Live Website: <input type="text" ng-model="newProjectData.website"></span><br>
-                  <span class="alumniBootcamp">Image Url: <input type="text" ng-model="newProjectData.imageurl"></span><br>
-                  <span class="alumniBootcamp">Github Repo: <input type="text" ng-model="newProjectData.github"></span>
+                <form class="update-form" ng-submit="putProject(project._id, updateData)">
+                  <span class="alumniBootcamp">Alumni name: <input type="text" ng-model="updateData.name"></span><br>
+                  <span class="alumniBootcamp">Bootcamp: <input type="text" ng-model="updateData.bootcamp"></span><br>
+                  <span class="alumniBootcamp">Course: <input type="text" ng-model="updateData.course"></span><br>
+                  <span class="alumniBootcamp">Live Website: <input type="text" ng-model="updateData.website"></span><br>
+                  <span class="alumniBootcamp">Image Url: <input type="text" ng-model="updateData.imageurl"></span><br>
+                  <span class="alumniBootcamp">Github Repo: <input type="text" ng-model="updateData.github"></span>
                 </form>
                 <button type="submit" class="update-button" name="button">Update Project</button>
               </div>

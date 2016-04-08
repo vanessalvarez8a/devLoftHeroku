@@ -21,9 +21,9 @@ angular.module('devLoftApp')
     })
   }
 
-// CHANGES 
-  $scope.putProject = function(id) {
-    projectService.putProject(id).then(function(res) {
+// CHANGES
+  $scope.putProject = function(id, upd) {
+    projectService.putProject(id, upd).then(function(res) {
 
     })
   }
