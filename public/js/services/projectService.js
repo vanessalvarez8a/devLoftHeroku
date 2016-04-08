@@ -24,10 +24,7 @@ angular.module('devLoftApp')
       })
       return deferred.promise;
     },
-    getProjects: function(query, value) {
-      if(query) {
-        return $http.get('/api/project?' + query + '=' + value);
-      }
+    getProjects: function() {
       return $http.get('/api/project');
     },
     // Changes low
