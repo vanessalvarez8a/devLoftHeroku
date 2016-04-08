@@ -57,7 +57,7 @@ passport.use(new GitHubStrategy({
           };
           newUser.save(function(err){
               if(err) {
-                  throw err;
+                  // throw err;
               }
               return cb(err, newUser);
           })
