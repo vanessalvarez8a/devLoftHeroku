@@ -32,7 +32,16 @@ angular.module('devLoftApp')
       return $http.delete('/api/project/' + id); //
     },
     putProject: function(id, data) { // CHANGES
-      return $http.put('/api/project/' + id, data);
+      var dfd = $q.defer();
+      $http.put('/api/project/' + id, data).then(function(res, err){
+        if (err) {
+          dfd.reject(err);
+        }
+        else{
+          dfd.resolve(res);
+        }
+      })
+      return dfd.promise;
     }
   }
 });
