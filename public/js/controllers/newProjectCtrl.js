@@ -26,7 +26,7 @@ angular.module('devLoftApp')
     console.log('putting project', upd);
     projectService.putProject(id, upd).then(function(res) {
         console.log('updated data', res)
-        $scope.projects[idx] = res.data;
+        $scope.userProjects[idx] = res.data;
     })
   }
 
