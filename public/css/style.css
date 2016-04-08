@@ -557,7 +557,7 @@ h5 {
 .update-form {
   margin-top: 15px;
   padding-top: 10px;
-  border-top: 1px solid gray;
+  border-top: 1px solid rgba(192,192,192,0.3);;
 }
 
 /*/////////// ANIMATED CURSOR /////////*/
